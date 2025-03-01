@@ -47,7 +47,7 @@ PRESIFY
     <SidebarContent className=" px-3 mt-10 gap-y-6">
 
      <NavMain items={data.navMain}/>
-     
+     <RecentOpen/>
     </SidebarContent>
     <SidebarFooter />
   </Sidebar>

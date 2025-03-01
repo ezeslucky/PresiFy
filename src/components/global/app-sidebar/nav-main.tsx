@@ -28,7 +28,7 @@ function NavMain({
         <SidebarMenu>
             {items.map((item,idx ) => (
                 <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild tooltip={item.title} className={`${pathname.includes(item.url) && "bg-background-"}`} >
+                <SidebarMenuButton asChild tooltip={item.title} className={`${pathname.includes(item.url) && "bg-muted"}`} >
 <Link href={item.url} className={`  text-lg ${pathname.includes(item.url) && 'font-bold'}`}>
 <item.icon  className=' text-lg'></item.icon>
 <span>{item.title}</span>
