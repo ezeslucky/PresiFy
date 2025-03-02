@@ -19,6 +19,7 @@ if(!projectId || !slides){
       return
 }
   }
+  
   return recentProjects.length > 0 ? (
     <SidebarGroup>
     <SidebarGroupLabel>
