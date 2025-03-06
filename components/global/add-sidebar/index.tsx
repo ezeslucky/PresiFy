@@ -1,18 +1,14 @@
- "use client"
- import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
     Sidebar,
     SidebarContent,
     SidebarFooter,
-   
+    SidebarGroup,
     SidebarHeader,
     SidebarMenuButton,
   } from "@/components/ui/sidebar"
 import { Project, User } from '@prisma/client'
 import React from 'react'
-import NavMain from "./nav-main"
-import { data } from "@/lib/constants"
-import RecentOpen from "./recent-open"
 
 
 
@@ -36,7 +32,7 @@ const  AppSidebar = ({recentProjects,user, ...props}:
 src={'/logo.svg'}
 alt={'Logo'}
 />
-<AvatarFallback className=" rounded-lg">P</AvatarFallback>
+<AvatarFallback className=" rounded-lg">PR</AvatarFallback>
     </Avatar>
 </div>
 <span className=" truncate text-primary text-3xl font-semibold">
@@ -45,10 +41,9 @@ PRESIFY
 </span>
         </SidebarMenuButton>
     </SidebarHeader>
-    <SidebarContent className=" px-3 mt-10 gap-y-6">
-
-     <NavMain items={data.navMain}/>
-     <RecentOpen recentProjects={recentProjects}/>
+    <SidebarContent>
+      <SidebarGroup />
+      <SidebarGroup />
     </SidebarContent>
     <SidebarFooter />
   </Sidebar>
